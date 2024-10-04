@@ -1,0 +1,62 @@
+/* Define o layout da página */
+body {
+    display: grid; 
+    grid-template-columns: 1fr 3fr 1fr; /*Dividindo a página em 3 colunas em uma proporção (1:3:1) */
+    grid-template-rows: auto 1fr auto; /*Dividindo a página em 3 linhas. A 1ª e 3ª terão a altura ajusatada de acordo com o que o conteúdo precisar (auto). A linha do meio vai usar toda o espaço restante */
+    grid-template-areas: /* Aqui estou organizando as seções no grid (como uma tabela)*/
+        "header header header"
+        "nav content sidebar"
+        "footer footer footer";
+    height: 100%;
+    font-family: Verdana, sans-serif;
+}
+
+/* Estilos para as áreas */
+.header {
+    grid-area: header;
+    background-color: #540045;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #acffe9;
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.content img {
+    display: block;          /* Faz a imagem ser um bloco */
+    margin: 0 auto;        /* Margem acima e abaixo 0 e horizontalmente no meio do Main */
+    border-radius: 30px;   /* Adiciona bordas arredondadas */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #acffe9;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #fbff8a;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+
