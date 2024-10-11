@@ -1,11 +1,44 @@
+<html>
 <head>
     <title>Atividade CSS grid</title>
     <link rel="stylesheet" href="grid.css">
+    <script>
+        // Mensagem de alerta ao carregar a página
+        window.onload = function() {
+            alert("Bem-vindo ao meu site com CSS Grid!");
+        }
+
+        // Função para exibir uma mensagem de confirmação
+        function confirmAction() {
+            let confirmacao = confirm("Você confirma esta ação?");
+            if (confirmacao) {
+                alert("Ação confirmada!");
+            } else {
+                alert("Ação cancelada!");
+            }
+        }
+
+        // Função para imprimir a página
+        function imprimirPagina() {
+            window.print();
+        }
+
+	function mostrarDescricaoFoto() {
+            let itens = ["Cachorro", "Fofura", "Peruca"];
+            let resultado = "";
+            for (let i = 0; i < itens.length; i++) {
+                resultado += itens[i] + "\n";
+            }
+            alert("O que tem na foto: \n" + resultado);
+        }
+
+    </script>
 </head>
 <body>
     <header class="header">
         <h1>Meu Site com CSS grid</h1>
     </header>
+
     <nav class="nav">
         <ul>
             <li>Home</li>
@@ -14,14 +47,19 @@
             <li>Contato</li>
         </ul>
     </nav>
+
     <main class="content">
         <article>
             <h2>Bem-vindo!</h2>
             <p>Este é o conteúdo principal da página.</p>
-	    <img src="cachorrinho_fofo.jpg" alt="Cachorrinho fofo" />
-	    <p>Espero que goste!</p> 	
+            <img src="cachorrinho_fofo.jpg" alt="Cachorrinho fofo" />
+            <p>Espero que goste!</p>
+	    <button onclick="mostrarDescricaoFoto()">Clique para ver o que tem na foto</button><br><br>
+            <button onclick="confirmAction()">Clique para confirmar ação</button><br><br>
+            <button onclick="imprimirPagina()">Imprimir Página</button>
         </article>
     </main>
+
     <aside class="sidebar">
         <h3>Links Úteis</h3>
         <ul>
@@ -29,6 +67,7 @@
             <li>Link 2</li>
         </ul>
     </aside>
+
     <footer class="footer">
         <p>2024 Meu Site. Feito por <strong>Anna Beatriz</strong>.</p>
     </footer>
